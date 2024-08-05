@@ -28,9 +28,9 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-dw@s=5$yn+h*zp
 #DEBUG = True
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['southdog0311.pythonanywhere.com', '127.0.0.1']
 
-
+CSRF_TRUSTED_ORIGINS = ['https://southdog0311.pythonanywhere.com']
 # Application definition
 
 INSTALLED_APPS = [
@@ -153,3 +153,4 @@ STORAGES = {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
     },
 }
+
